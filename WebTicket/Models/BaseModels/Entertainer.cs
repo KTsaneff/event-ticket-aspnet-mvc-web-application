@@ -7,7 +7,7 @@
     {
         public Entertainer()
         {
-            Productions = new HashSet<IProduction>();
+            Productions = new HashSet<IEvent>();
         }
 
         [Key]
@@ -18,7 +18,7 @@
         [Required]
         public string FullName { get; set; } = null!;
 
-        public ICollection<IProduction> Productions { get; set; }
+        public ICollection<IEvent> Productions { get; set; }
 
         public string? Biography { get; set; }
     }

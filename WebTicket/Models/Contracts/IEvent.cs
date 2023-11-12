@@ -1,14 +1,12 @@
 ﻿namespace WebTicket.Models.Contracts
 {
-    public interface IProduction
+    public interface IEvent
     {
         int Id { get; set; }
 
-        string Name { get; set; }
+        IProduction Production { get; set; }
 
-        Director Director { get; set; }
-
-        Producer Producer { get; set; }
+        DateTime StartDateAndTime { get; set; }
 
         ICollection<IEntertainer> Cast {  get; set; }
 

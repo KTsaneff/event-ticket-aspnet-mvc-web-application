@@ -6,7 +6,8 @@
     {
         public Production()
         {
-            this.Cast = new HashSet<IEntertainer>();    
+            this.Cast = new HashSet<IEntertainer>();
+            this.EventsProductions = new HashSet<EventProduction>();
         }
 
         [Key]
@@ -16,9 +17,10 @@
         public string Name { get; set; } = null!;
 
         [Required]
-        public string Description { get; set; } = null!;
-
-        [Required]
+        public Director Director { get; set; } = null!;
+        public Producer? Producer { get; set; }
         public ICollection<IEntertainer> Cast { get; set; }
+
+        public ICollection<EventProduction> EventsProductions { get; set; }
     }
 }
